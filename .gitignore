@@ -5,4 +5,5 @@ npm-debug.*
 public
 _drafts
 .forestry
-.githu
+.github
+.nojekyll
