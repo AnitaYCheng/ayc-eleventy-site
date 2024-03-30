@@ -1,7 +1,7 @@
 # The Eleventy build of [Anita Cheng's website](https://anitacheng.com/)
 I started from the [Eleventy Duo starter theme](https://github.com/yinkakun/eleventy-duo) and heavily modified it.
 
-I decided to save a version of this website separately, since I prefer to build and test locally. (Also, because the GitHub Actions I've seen involved `npm` and the Duo theme uses `yarn` and I just couldn't arsed to figure it out for yarn...)
+I decided to save a version of this website separately, since I prefer to build and test locally. (Also, because the GitHub Actions I've seen involved `npm` and the Duo theme uses `yarn` and I just couldn't be arsed to figure it out for yarn...)
 
 This will be the initial build from March 2024. I probably won't bother updating this repo with new blog posts or the like.
 
@@ -37,6 +37,7 @@ Each speaking engagement listed on the `speaking` page is saved separately in th
 - [SVG favicon in dark mode](https://codyhouse.co/nuggets/svg-favicon-dark-mode), because mine looked janky
 - [Image galleries with PhotoSwipe](https://www.markllobrera.com/posts/eleventy-building-image-gallery-photoswipe) and I also somehow implemented [dynamic captions](https://github.com/dimsemenov/photoswipe-dynamic-caption-plugin) with it. This is referenced in `.eleventy.js`
 - [Reading progress bar](https://w3collective.com/reading-progress-indicator/) added to `src/js/main.js`
+- [Eleventy redirect from](https://brianm.me/posts/eleventy-redirect-from/) since some of my URLs no longer match the old ones. It really adds a ton of folders, but worth it!
 
 ### Hanging punctuation
 A lot of things I had to hack in JavaScript on my old site, I can now do in CSS! Like the aforementioned sticky div. Super cool! But the `hanging-punctuation` CSS property is still not standard, sadface. Luckily [this tutorial from envatotuts+](https://webdesign.tutsplus.com/getting-the-hang-of-hanging-punctuation--cms-19890a) still works, even if it's 10 years old! I stuck the code into `src/js/main.js`.
