@@ -1,0 +1,83 @@
+{
+  "name": "Anita Cheng",
+  "description": "Anita does content design and information architecture in government, currently at 18F.",
+  "url": "http://anitacheng.com",
+  "author": {
+    "name": "Anita Cheng",
+    "email": "design@anitacheng.com",
+    "twitterHandle": "anitaycheng"
+  },
+  "defaultSocialImage": "/images/AClogo.svg",
+  "defaultFooterImage": "/images/mail_heart_icon.json",
+  "headerLinks": [
+    {
+      "text": "Work",
+      "url": "/work/",
+      "slug": "/work/",
+      "slugalt": "/projects/",
+      "external":false
+    },
+    {
+      "text": "Writing",
+      "url": "/writing/page-1/",
+      "slug": "/writing/",
+      "slugalt": "/notes/",
+      "external": false
+    },
+    {
+      "text": "Speaking",
+      "url": "/speaking/",
+      "slug": "/speaking/",
+      "slugalt": "/talk/",
+      "external": false
+    },
+    {
+      "text": "About",
+      "url": "/about/",
+      "slug": "/about/",
+      "slugalt": "/about/",
+      "external": false
+    }
+  ],
+  "socialLinks": [
+    {
+      "text": "Email",
+      "url": "mailto:design@anitacheng.com",
+      "external": true
+    },
+    {
+      "text": "LinkedIn",
+      "url": "https://www.linkedin.com/in/anitaycheng/",
+      "external": true      
+    },
+    {
+      "text": "Mastodon",
+      "url": "https://mastodon.publicinterest.town/@anitaycheng",
+      "external": true
+    },
+
+    {
+      "text": "GitHub",
+      "url": "https://github.com/AnitaYCheng/",
+      "external": true
+    },
+    {
+      "text": "Instagram",
+      "url": "https://www.instagram.com/anitaycheng/",
+      "external": true
+    },
+    { 
+      "text": "ADPList",
+      "url": "https://adplist.org/mentors/anita-cheng",
+      "external": true
+    }
+  ],
+  "footerLinks": [
+    {
+      "text": "RSS",
+      "url": "/feed.xml",
+      "external": true
+    }
+  ],
+  "showFooterAttribution": false
+}

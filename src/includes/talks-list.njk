@@ -1,0 +1,27 @@
+<ul class="post-list">
+  {% for talks in talkslist %}
+    <li class="post-list__item">
+      <div>
+        <div class="post-list__meta">
+          <time datetime="{{ talks.date | htmlDateString }}">
+            {{ talks.date | readableDate }}
+          </time>,
+          <span>{{ talks | readingTime }} read</span>
+        </div>
+
+      </div>
+
+      <h3 class="post-list__title" id="{{ talks.data.conference | slugify }}">
+          {{ talks.data.conference | safe }}
+      </h3>
+
+      
+      {% if talks.data.writeup %}
+        <p class="post-list__excerpt"><a href="{{ talks.url }}" aria-describedby="{{ talks.data.title | slugify }}" >Slides and transcript</a></p>
+      {% endif %}
+      {% if talks.data.video_link %}
+        <p class="post-list__excerpt"><a href="{{ talks.data.video_link }}" aria-describedby="{{ talks.data.title | slugify }}">Video</a></p>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>

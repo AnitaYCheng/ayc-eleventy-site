@@ -1,0 +1,16 @@
+<ul class="work-list">
+  {% for projects in projectlist %}
+    <li class="post-list__item">
+      <h3 class="work-list__title" id="{{ projects.data.title | slugify }}">
+        <a href="{{ projects.url }}">{{ projects.data.title | safe }}</a>
+      </h3>
+      <div class="work-list__spotlight">
+       <a href="{{ projects.url }}">{% image projects.data.image, projects.data.imagealt %}</a>
+
+      <p class="work-list__excerpt">{{ projects.data.work_description | safe }}
+      <a href="{{ projects.url }}" aria-describedby="{{ projects.data.title | slugify }}" >Read more...</a></p>
+    </div>
+    </li>
+    <div class="wave-divider"></div>
+  {% endfor %}
+</ul>

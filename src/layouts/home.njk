@@ -1,0 +1,35 @@
+---
+layout: base.njk
+---
+
+<div class="hero">
+  <div class="hero-content">
+    <div class="intro">
+      {{ content | safe }}
+    </div>
+    <div class="intro-symbol">
+       <lottie-player src="{{ image | url }}" background="transparent" aria-description="Simple line animation of a bulb lighting up while bouncing" speed="1" loop hover></lottie-player>
+    </div>
+  </div>
+</div>
+<div class="wave-divider"></div>
+<section class="post-list__wrapper">
+   <div class="writing-header">
+      <h2 class="post-list__heading">My latest thoughts</h2>
+      <p class="post-list__description">Long-form writing about serious things.</p>
+   {% set postslist = collections.longforms | head(-3) %}
+  {% include "posts-list.njk" %}
+  </div>
+   <lottie-player class="writing-animation" src="images/Pencil_icon.json" background="transparent" aria-description="Simple line animation of a pencil making a line" speed="1" loop hover></lottie-player>
+   <div class="writing-header">
+      <h2 class="post-list__heading">My latest notes</h2>
+      <p class="post-list__description">Summaries and observations.</p>
+   {% set postslist = collections.notes | head(-3) %}
+  {% include "posts-list.njk" %}
+  </div>
+</section>
+
+
+
+
+<a class="all-posts-link" href="{{ '/writing/page-1/' | url }}">View all my posts</a>

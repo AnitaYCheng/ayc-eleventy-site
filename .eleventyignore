@@ -1,0 +1,7 @@
+README.md
+src/conferences/*conferenceTemplate.md
+src/posts/*postTemplate.md
+src/projects/*projectTemplate.md
+src/talks/*talkTemplate.md
+src/work/*workTemplate.md
+src/_drafts/

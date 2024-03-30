@@ -1,0 +1,77 @@
+---
+layout: base.njk
+---
+
+<article class="post">
+  <header class="post__header">
+    <h1>{{ title | safe }}</h1>
+    <div class="post__details">
+      <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>, a <span>{{ content | readingTime }} read</span>
+    </div>
+  </header>
+
+  <main class="post__content">
+    {% if image %}
+      {% image image, imagealt, imagecaption %}
+    {% endif %}
+    {{ content | safe }}
+
+  </main>
+  <div class="wave-divider"></div>
+  <aside class="post__aside">
+    {% if canonicalSite %}
+    <p>Originally posted on <a href="{{ canonicalURL | url }}" rel="noopener noreferrer">{{ canonicalSite | safe }}</a></p>
+    {% endif %}
+    <p class="tag-more">Read more about 
+      {% for tag in tags | pageTags %}
+        {% set tagUrl %}/writing/tags/{{ tag }}/{% endset %}
+        <a href="{{ tagUrl | url }}">#{{ tag }}</a> &nbsp;
+      {% endfor %}
+    </p>
+
+<div id="disqus_thread"></div>
+  <script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+  
+    var disqus_config = function () {
+    this.page.url = '{{ site.url }}/{{ page.fileSlug }}';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = '{{ page.fileSlug }}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://anitachengblog.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+    <nav class="post__pagination">
+      {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
+      {%- if nextPost %}
+
+        <a href="{{ nextPost.url | url }}" title="Next post">
+          ←
+          <span>{{ nextPost.data.title }}</span>
+        </a>
+
+      {% endif %}
+
+      {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
+      {%- if previousPost %}
+
+        <a href="{{ previousPost.url | url }}" title="Previous post">
+          <span>{{ previousPost.data.title | safe }}</span>
+          →
+        </a>
+
+      {% endif %}
+    </nav>
+  </aside>
+
+</article>
+ <div id="progress-bar"></div>

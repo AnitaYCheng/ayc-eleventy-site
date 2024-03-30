@@ -1,0 +1,17 @@
+.about {
+  max-width:65%;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+
+}
+.about h1 {
+  margin-bottom: 2rem;
+}
+
+.about figure {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+}

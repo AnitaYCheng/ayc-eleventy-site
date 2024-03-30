@@ -1,0 +1,28 @@
+<ul class="event-list">
+  {% for post in collections.conference | reverse %}
+    <li class="event-list__item">
+        <div class="post__details">
+            {{ post.date | readableDate }} - {{ post.data.location | safe }}
+        </div>
+        <h3 class="post-list__title" id="{{ post.data.title | slugify }}">
+            {% if post.data.eventURL %}
+                <a href="{{ post.data.eventURL}}" rel="noopener noreferrer">{{ post.data.title | safe }}</a>
+            {% else %}
+                {{ post.data.title | safe }}
+            {% endif %}
+        </h3>
+        <div class="post__details">
+            {{ post.data.eventType | safe }}
+        </div>
+        <p class="post-list__excerpt">
+                {% if post.data.talkURL %}<a href="{{ post.data.talkURL }}">Transcript</a>
+                {% endif %}
+                {% if post.data.slideEvent %}<a href="{{ post.data.slideEvent }}">Slides</a>
+                {% endif %}
+                {% if post.data.eventVideoURL %} - 
+                    <a href="{{ post.data.eventVideoURL }}" rel="noopener noreferrer">Video</a>
+                {% endif %}
+        </p>
+    </li>
+  {% endfor %}
+</ul>

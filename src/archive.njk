@@ -1,0 +1,39 @@
+--- 
+layout: base.njk 
+permalink: /writing/page-{{ pagination.pageNumber + 1 }}/
+title: Writing
+description: Thoughts on design, careers, life, and the occasional coding project.
+pagination:
+    data: collections.posts
+    size: 5
+    alias: posts
+    reverse: true
+redirect_from: /blog/
+---
+<header class="archive">
+    <h1>Writing</h1>
+    <h2>Some of my thoughts on <a href="/writing/tags/design">design</a>, <a href="/writing/tags/careers">careers</a>, <a href="/writing/tags/life">life</a>, and <a href="/writing/tags/coding">coding</a>. I also have <a href="/writing/tags/COVID">notes about COVID science</a> and some <a href="/writing/tags/events">event live-tweeting notes</a> from <a href="https://wakelet.com/@AnitaYCheng">Wakelet</a>.</h2>
+</header>
+<div class="wave-divider">
+</div>
+<ul class="post-list">
+  {% for post in posts %}
+    <li class="post-list__item">
+      <div>
+        <div class="post__details">
+          <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>,
+          <span>a {{ post | readingTime }} read</span>
+        </div>
+      </div>
+      <h3 class="post-list__title" id="{{ post.data.title | slugify }}">
+        <a href="{{ post.url }}">{{ post.data.title | safe }}</a>
+      </h3>
+      <p class="post-list__excerpt">{{ post.data.description | safe }}
+        <a href="{{ post.url }}" aria-describedby="{{ post.data.title | slugify }}" >Read more...</a></p>
+    </li>
+  {% endfor %}
+</ul>
+<nav class="post__pagination">
+{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">← Previous page</a>{% endif %}
+{% if pagination.href.next %}<a href="{{ pagination.href.next }}">Next page →</a>{% endif %}
+</nav>

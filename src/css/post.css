@@ -1,0 +1,147 @@
+header.archive {
+  max-width:50%;
+  display:block;
+  margin:0 auto;
+}
+
+header.archive h2 {
+  font-family:'Lora', serif;
+  font-weight:400;
+  font-size:var(--text-lg);
+  margin:1rem 0;
+  line-height:1.6;
+}
+
+
+.post {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+  display:block;
+  max-width:50%;
+  margin:0 auto;
+  line-height:1.8;
+}
+
+/* .post > * + * {
+  margin-top: 4rem;
+} */
+
+.post__details {
+  opacity: 0.8;
+  font-size: var(--text-base);
+  margin-top:1rem;
+}
+
+article .post__details {
+  margin:1rem auto 3rem;
+}
+
+.post__content {
+  word-wrap: break-word;
+}
+
+.post__aside {
+  margin-top: 2rem;
+}
+
+.tag-more {
+  font-style: italic;
+}
+
+.post__tags {
+  opacity: 0.8;
+  font-size: var(--text-sm);
+  text-align:right;
+}
+
+.post__tags * + * {
+  margin-left: 0.5rem;
+}
+
+.post__pagination {
+  padding-top: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size:var(--text-sm);
+}
+
+.post__pagination > *:only-child {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.post__pagination a {
+  display: flex;
+  align-items: center;
+}
+.post__pagination span {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.post__pagination a {
+  text-decoration: none;
+}
+
+.post__pagination a span {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.post__pagination a span:hover {
+  text-decoration: none;
+}
+
+article.work {
+  display:flex;
+}
+
+#work-excerpt {
+  position:-webkit-sticky;
+  position:sticky;
+  top:0;
+  background-color: #ffffff;
+  max-width: 40%;
+  color: #000;
+  align-self: flex-start;
+}
+
+#work-excerpt .post__details>*+* {
+  margin-left:0;
+}
+
+#work-excerpt h1 {
+  font-size: var(--text-3xl);
+}
+
+#work-excerpt p {
+  font-size: var(--text-base);
+  margin-top:0.8rem;
+}
+
+.work-post__content {
+  max-width: 60%;
+  margin-left:10%;
+}
+
+#work-excerpt .work-contribution {
+  border-left: 1px solid #ccc;
+  padding-left: 1rem;
+  font-style:italic;
+  font-size: var(--text-base);
+}
+
+#work-excerpt .work-contribution ul {
+  list-style: none;
+  margin-left:2rem;
+}
+
+#work-excerpt .work-contribution ul li {
+  margin-bottom: 0;
+}
+
+.post__content img, .work-list__spotlight img, .work-post__content img {
+  border:1px solid #ccc;
+}

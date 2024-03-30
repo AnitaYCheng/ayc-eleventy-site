@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if canonicalURL %}
+    <link rel="canonical" href="{{ canonicalURL | url }}">
+      {% else %}
+    <link rel="canonical" href={{ page.url | url | absoluteUrl(site.url) }}>
+    {% endif%}
+    {% if talklength %} 
+    <meta name="robots" content="noindex">
+    {% endif %}
+    {% bundledcss %}
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <title>
+    {{  title | safe }}
+      {% if title %}
+         | {{ site.name }}
+      {% else %}
+        {{ site.name }}
+    {% endif %}
+    </title>
+
+    <link rel="icon" type= “image/x-icon” href="/images/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+
+    <meta property="og:title" content="{{  title or site.name | escape }}">
+    <meta property="og:site_name" content="{{ site.name }}"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="{{ site.url + page.url }}"/>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="generator" content="{{ eleventy.generator }}">
+
+    {% if site.author.twitterHandle %}
+      <meta name="twitter:creator" content="@{{ site.author.twitterHandle | replace('@', '') }}"/>
+    {% endif %}
+
+    {% set desc = description %}
+    {% if not desc %}
+      {% set desc = content | striptags | truncate(140) %}
+    {% endif %}
+    {% if desc %}
+      <meta name="description" content="{{ desc | striptags  }}">
+      <meta property="og:description" content="{{ desc | striptags }}">
+    {% endif %}
+
+    {% if not socialImage %}
+      {% set socialImage = site.defaultSocialImage %}
+    {% endif %}
+    {% if socialImage %}
+      <meta property="og:image" content="{{ socialImage | url | absoluteUrl(site.url) }}"/>
+      <meta name="twitter:image" content="{{ socialImage | url | absoluteUrl(site.url) }}"/>
+    {% endif %}
+
+    {# Add mermaid -- start #}
+      <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+      <script>mermaid.initialize({startOnLoad:true});</script>
+    {# Add mermaid -- end #}
+
+    {# Add Lottie animation script -- start #}
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    {# Add Lottie animation script -- end #}
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LYNC5GDL89"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LYNC5GDL89');
+</script>
+  </head>
+
+  <body>
+    <div class="grid-wrapper">
+      <header class="header" aria-labelledby="site-title">
+        <div class="header__content">
+          <span class="site-title" id="site-title">
+            <a href="{{ "/" | url }}"><img class="site-logo" src=" {{ site.defaultSocialImage | url }} " alt="" /></a>
+            <a href="{{ "/" | url }}">
+              {{site.name}}
+            </a>
+          </span>
+
+          {% if site.headerLinks %}
+            <nav class="nav">
+              <ul class="nav__list">
+                {% for item in site.headerLinks %}
+                  {% set currentAttribute = '' %}
+                  {% set externalAttribute = '' %}
+
+                  {% if item.external %}
+                    {% set externalAttribute = 'target="_blank" rel="noopener noreferrer"' %}
+                  {% endif %}
+
+                  {% if item.url in page.url or item.slug in page.url or item.slugalt in page.url %}
+                    {% set currentAttribute = 'aria-current="page"' %}
+                  {% endif %}
+
+                  <li class="nav-item">
+                    <a href="{{ item.url | url }}" {{ currentAttribute | safe }} {{ externalAttribute | safe }}>{{ item.text }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </nav>
+
+          {% endif %}
+
+        </div>
+      </header>
+
+      <main id="maincontent" class="main">
+        {{ content | safe }}
+      </main>
+
+      <footer class="footer">
+        <div class="custom-shape-divider-top">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M1200 0L0 0 598.97 114.72 1200 0z" class="shape-fill"></path>
+            </svg>
+        </div>
+        <div class="footer__content">
+              <div class="footer-symbol">
+                <lottie-player src=" {{ site.defaultFooterImage | url }}" background="transparent" aria-description="Simple line animation of an envelope opening with a heart bouncing out" style="width:100px;height:100px;margin:auto;" speed="1" loop hover></lottie-player>
+              </div>
+
+          <ul class="hero__social-links">
+            {% if site.socialLinks %}
+              {% for item in site.socialLinks %}
+                {% set externalAttribute = '' %}
+
+                {% if item.external %}
+                  {% set externalAttribute = 'target="_blank" rel="noopener noreferrer"' %}
+                {% endif %}
+
+                <li>
+                  <a href="{{ item.url | url }}" {{ externalAttribute | safe }} >{{ item.text }}</a>
+                </li>
+              {% endfor %}
+            {% endif %}
+
+            {% if site.footerLinks %}
+
+              {% for item in site.footerLinks %}
+                {% set externalAttribute = '' %}
+
+                {% if item.external %}
+                  {% set externalAttribute = 'target="_blank" rel="noopener noreferrer"' %}
+                {% endif %}
+
+                <li>
+                  <a href="{{ item.url | url }}" {{ externalAttribute | safe }} >{{ item.text }}</a>
+                </li>
+              {% endfor %}
+            {% endif %}
+          </ul>
+
+          {% if site.showFooterAttribution %}
+            <p class="footer__attribution">Powered by <a href="https://www.11ty.dev" target="_blank" rel="noopener">Eleventy</a>, icons by <a href="https://unicornicons.com/" target="_blank" rel="noopener">Unicorn Icons</a></p>
+          {% endif %}
+        </div>
+      </footer>
+
+    {% bundledjs %}
+  </body>
+</html>

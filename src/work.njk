@@ -1,0 +1,15 @@
+---
+layout: base.njk
+title: Work
+description: Case studies of paid work.
+---
+<header class="archive">
+<h1>Work</h1>
+<h2>I like making useful digital things, and I like talking about how I made them. Here are some things I have made.</h2>
+</header>
+<div class="wave-divider">
+</div>
+{% set worklist = collections.work %}
+{% include "worklist.njk" %}
+
+<p class="project-intro"><a href="/projects/">You may also be interested in my pro bono or student projects</a>.</p>

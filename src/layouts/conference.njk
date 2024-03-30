@@ -1,0 +1,18 @@
+<li class="post-list__item">
+    <div class="post-list__meta">
+        {{ conferences.data.date | readableDate }}, {{ conferences.data.location | safe }}
+    </div>
+    <h3 class="post-list__title" id="{{ conferences.data.title | slugify }}">
+        {% if conferences.data.eventURL %}
+            <a href="{{ conferences.data.eventURL}}" rel="noopener noreferrer">{{ conferences.data.title | safe }}</a>
+        {% else %}
+            {{ conferences.data.title | safe }}
+        {% endif %}
+    </h3>
+    <p class="post-list__excerpt">
+            <a href="{{ conferences.data.talkURL }}">Transcript</a>
+            {% if conferences.data.eventVideoURL %} - 
+                <a href="{{ conferences.data.eventVideoURL }}" rel="noopener noreferrer external">Video</a>
+            {% endif %}
+    </p>
+</li>

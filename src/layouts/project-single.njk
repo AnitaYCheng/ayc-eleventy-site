@@ -1,0 +1,49 @@
+---
+layout: base.njk
+---
+<article class="work">
+  <header id="work-excerpt">
+    <h1>{{ title | safe }}</h1>
+    <div class="post__details">
+      <p>{{ work_type }}</p>
+      {% if start_date %}
+        <p><strong>Duration:</strong> {{ start_date }} {% if end_date %}to {{ end_date }}{% endif %}</p>
+      {% endif %}
+      <p class="work-direction">{{ work_direction | safe }}</p>
+      <section class="work-contribution"><lh><em>What I did: </em></lh>{{ work_contribution | safe }}</section>
+      <p>{{ work_description |safe }}</p>
+    </div>
+  </header>
+
+  <section class="work-post__content">
+    {% image image, imagealt, imagecaption %}
+
+    {{ content | safe }}
+  
+    <div class="wave-divider"></div>
+      <aside class="post__aside">
+
+        <nav class="post__pagination">
+          {%- set nextPost = collections.projects | getNextCollectionItem(page) %}
+          {%- if nextPost %}
+
+            <a href="{{ nextPost.url | url }}" title="Next project">
+              ←
+              <span>{{ nextPost.data.title | safe }}</span>
+            </a>
+
+          {% endif %}
+
+          {%- set previousPost = collections.projects | getPreviousCollectionItem(page) %}
+          {%- if previousPost %}
+
+            <a href="{{ previousPost.url | url }}" title="Previous project">
+              <span>{{ previousPost.data.title | safe }}</span>
+              →
+            </a>
+
+          {% endif %}
+        </nav>
+      </aside>
+    </section>
+</article>

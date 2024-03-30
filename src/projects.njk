@@ -1,0 +1,13 @@
+---
+layout: base.njk
+title: Projects
+description: Case studies of unpaid design work.
+---
+<header class="archive">
+    <h1>Projects</h1>
+    <h2>Before I got my lucky break, I was an aspiring designer hoping to prove to somebody I knew what I was doing. Hopefully these case studies are useful to other career changers out there!</h2>
+</header>
+<div class="wave-divider">
+</div>
+{% set projectlist = collections.projects %}
+{% include "projectlist.njk" %}

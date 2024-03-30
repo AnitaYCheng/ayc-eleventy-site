@@ -1,0 +1,22 @@
+---
+layout: base.njk
+---
+
+<article class="post">
+  <header class="post__header">
+    <h1>{{ title | safe }}</h1>
+    <h2 class="post__details">Given at {{ event | safe }} as a {{ talklength | safe }}</h2>
+    <div class="post__details">
+      A {{ content | readingTime }} read
+    </div>
+  </header>
+
+  <main class="post__content">
+    <p></p>
+  
+  <h2>Transcript {% if slides_link %}(and see <a href="{{ slides_link }}" target="_blank">slides</a>){% endif %}</h2>
+    {{ content | safe }}
+  </main>
+
+</article>
+ <div id="progress-bar"></div>

@@ -1,0 +1,27 @@
+---
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - nav
+    - post
+    - posts
+    - tagList
+  addAllPagesToCollections: true
+layout: base.njk
+permalink: /writing/tags/{{ tag }}/
+eleventyComputed:
+  title: "Writings about {{ tag }}"
+  description: "All posts tagged '{{ tag }}'"
+---
+<header class="archive">
+  <h1>Writings on {{ tag }}</h1>
+  <h2>{{ tagdescriptions[tag] }}</h2>
+</header>
+<div class="wave-divider">
+</div>
+
+{% set postslist = collections[tag] %}
+{% include "posts-list.njk" %}

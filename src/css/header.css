@@ -1,0 +1,83 @@
+.header {
+  max-width: none;
+  width: 100%;
+}
+
+.header__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(230, 230, 230, 1);
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight:400;
+  font-size:var(--text-lg);
+}
+
+.site-logo {
+  width:50px;
+  margin-right:1rem;
+
+}
+
+.site-title {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display:inline-flex;
+  align-items: center;
+}
+
+.site-title a {
+  text-decoration: none;
+  color:inherit;
+}
+
+.site-title a:hover {
+  color: rgb(41, 41, 41);
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.nav__list a {
+  color: rgb(117, 117, 117);
+  text-decoration: none;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.nav__list li {
+  margin-right: 2rem;
+}
+
+.nav__list li:last-child {
+  margin-right: 0;
+}
+
+.nav__list a:hover {
+  color: rgb(41, 41, 41);
+}
+
+#progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 8px;
+  z-index: 99;
+  background-color: #66B1BC;
+  transition: width 0.25s;
+}
+
+[aria-current="page"] {
+  border-bottom:5px solid #66B1BC;
+}
