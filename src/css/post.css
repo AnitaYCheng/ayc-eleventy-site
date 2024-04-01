@@ -77,8 +77,8 @@ article .post__details {
   align-items: center;
 }
 .post__pagination span {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .post__pagination a {
