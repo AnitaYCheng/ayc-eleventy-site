@@ -67,6 +67,11 @@
 
     {# Add Lottie animation script -- start #}
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script>
+    if (typeof lottie == 'undefined') {
+        document.write(unescape("%3Cscript src='/assets/lottie-player.js' type='text/javascript'%3E%3C/script%3E"));
+    }
+    </script>
     {# Add Lottie animation script -- end #}
 
   <!-- Google tag (gtag.js) -->

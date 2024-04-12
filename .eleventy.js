@@ -226,7 +226,7 @@ eleventyConfig.addShortcode('bundledcss', function () {
 
 eleventyConfig.addShortcode('bundledjs', function () {
   return manifest['main.js']
-    ? `<script src="${manifest['main.js']}"></script>`
+    ? `<script src="${manifest['main.js']}" defer></script>`
     : '';
 });
 
