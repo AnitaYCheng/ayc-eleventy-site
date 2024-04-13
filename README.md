@@ -46,7 +46,7 @@ A lot of things I had to hack in JavaScript on my old site, I can now do in CSS!
 Hahaha, I didn't end up finding a code solution to automatically add smart quotes. It turns out `markdown-it` (mentioned in `.eleventy.js`) has a `typographer` option that includes smart quotes. But when I set it to `true` it broke my galleries. (It's important to test when you add stuff!) It was trying to replace JavaScript quotes rendered by Photoswipe. I am not that good of a dev, so I elected to set text replacement to add smart quotes when I write in Obsidian, and then it copies over to Visual Studio Code where it's rendered properly.
 
 ### Lottie Files animations
-I downloaded the `.json` version of the icons on [Unicorn Icons](https://unicornicons.com/), then had to add the [Lottie Files script](https://lottiefiles.com/interactivity) in `src/layouts/base.njk` to activate them. Fun fact, you can add `aria` elements to these to add alt text!
+I downloaded the `.json` version of the icons on [Unicorn Icons](https://unicornicons.com/), then had to add the [Lottie Files script](https://lottiefiles.com/web-player) in `src/layouts/base.njk` to activate them. Fun fact, you can add `aria` elements to these to add alt text!
 
 ## Built (via the Eleventy Duo theme) with
 - Eleventy for site generation (obviously)
