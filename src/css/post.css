@@ -23,6 +23,10 @@ header.archive h2 {
   line-height:1.8;
 }
 
+.font-large .post, .font-large header.archive, .font-large .work-list {
+  max-width:68%;
+}
+
 /* .post > * + * {
   margin-top: 4rem;
 } */
@@ -116,9 +120,10 @@ article.work {
   font-size: var(--text-3xl);
 }
 
-#work-excerpt p {
+#work-excerpt span {
   font-size: var(--text-base);
   margin-top:0.8rem;
+  display:block;
 }
 
 .work-post__content {

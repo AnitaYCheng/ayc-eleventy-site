@@ -74,7 +74,17 @@ window.onload = function() {
   container.classList.add('hang-punctuation');
 }
 
+function getComputedFontSize() {
+    const para = document.querySelector('p');
+    const compStyles = window.getComputedStyle(para);
+    const fontSize = compStyles.getPropertyValue('font-size');
+    const fontNum = parseInt(fontSize.split('px')[0]);
+    if(fontNum >= 24.5) {
+        document.body.classList.add('font-large');
+    }
+};
 
+getComputedFontSize();
 
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {

@@ -18,12 +18,6 @@
   font-size:var(--text-lg);
 }
 
-.site-logo {
-  width:50px;
-  margin-right:1rem;
-
-}
-
 .site-title {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -31,9 +25,21 @@
   align-items: center;
 }
 
+.site-logo {
+  width:50px;
+  margin-right:1rem;
+  display:inline;
+  vertical-align: middle;
+  margin-top:0;
+}
+
 .site-title a {
   text-decoration: none;
   color:inherit;
+}
+
+.site-text {
+  vertical-align: middle;
 }
 
 .site-title a:hover {

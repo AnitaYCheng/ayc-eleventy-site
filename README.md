@@ -37,6 +37,7 @@ Each speaking engagement listed on the `speaking` page is saved separately in th
 - [SVG favicon in dark mode](https://codyhouse.co/nuggets/svg-favicon-dark-mode), because mine looked janky
 - [Image galleries with PhotoSwipe](https://www.markllobrera.com/posts/eleventy-building-image-gallery-photoswipe) and I also somehow implemented [dynamic captions](https://github.com/dimsemenov/photoswipe-dynamic-caption-plugin) with it. This is referenced in `.eleventy.js`
 - [Reading progress bar](https://w3collective.com/reading-progress-indicator/) added to `src/js/main.js`
+- [Detecting when a user has set their browser font size to be large](https://www.plousia.com/blog/detecting-browser-font-size-fix-accessibility-and-layout-issues-large-fonts), so I could tweak some layout and typography
 - [Eleventy redirect from](https://brianm.me/posts/eleventy-redirect-from/) since some of my URLs no longer match the old ones. It really adds a ton of folders, but worth it!
 
 ### Hanging punctuation
@@ -47,6 +48,7 @@ Hahaha, I didn't end up finding a code solution to automatically add smart quote
 
 ### Lottie Files animations
 I downloaded the `.json` version of the icons on [Unicorn Icons](https://unicornicons.com/), then had to add the [Lottie Files script](https://lottiefiles.com/web-player) in `src/layouts/base.njk` to activate them. Fun fact, you can add `aria` elements to these to add alt text!
+
 
 ## Built (via the Eleventy Duo theme) with
 - Eleventy for site generation (obviously)

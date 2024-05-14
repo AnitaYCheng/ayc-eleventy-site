@@ -54,6 +54,10 @@ object {
   margin:4rem auto;
 }
 
+.font-large .main {
+  max-width:95%;
+}
+
 img,
 video {
   max-width: 100%;

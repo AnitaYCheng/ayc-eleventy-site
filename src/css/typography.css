@@ -24,7 +24,7 @@ body {
   font-family: 'Lora', serif;
 }
 
-body p strong, body li strong {
+body p strong, body li strong, body #work-excerpt strong {
   font-weight:700;
 }
 
