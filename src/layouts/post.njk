@@ -1,7 +1,6 @@
 ---
 layout: base.njk
 ---
-
 <article class="post">
   <header class="post__header">
     <h1>{{ title | safe }}</h1>
@@ -9,6 +8,12 @@ layout: base.njk
       <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>, a <span>{{ content | readingTime }} read</span>
     </div>
   </header>
+{% if content | toc %}
+<aside aria-label="Table of contents" class="aside__toc">
+  <strong>Table of contents</strong>
+  {{ content | toc | safe }}
+</aside>
+{% endif %}
 
   <main class="post__content">
     {% if image %}
@@ -30,24 +35,24 @@ layout: base.njk
     </p>
 
 <div id="disqus_thread"></div>
-  <script>
+<script>
     /**
     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-  
+    
     var disqus_config = function () {
-    this.page.url = '{{ site.url }}/{{ page.fileSlug }}';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.url = '{{ site.url }}{{ permalink }}';  // Replace PAGE_URL with your page's canonical URL variable
     this.page.identifier = '{{ page.fileSlug }}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
-    
+   
     (function() { // DON'T EDIT BELOW THIS LINE
     var d = document, s = d.createElement('script');
-    s.src = 'https://anitachengblog.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
+     s.src = 'https://anitachengblog.disqus.com/embed.js';
+     s.setAttribute('data-timestamp', +new Date());
     (d.head || d.body).appendChild(s);
     })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
 
     <nav class="post__pagination">

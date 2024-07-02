@@ -151,6 +151,10 @@
     .event-list__item .post__details {
         margin-top:0;
     }
+
+    aside.aside__toc {
+        display:none;
+    }
 }
 
 @media (max-width:1200px){

@@ -15,7 +15,7 @@ You see, I’m a career-changer about 5 years out. I came from a completely unre
 
 Here’s what I know about how to "make it" in UX, in one sentence:
 
-### Designers, stop asking for permission to make an impact.
+## Designers, stop asking for permission to make an impact.
 
 I actually have lots of feelings about that. So here we go.
 
@@ -35,7 +35,7 @@ The solution is a lot more simple. You just don’t have to play by those rules.
 
 Your impact as a designer doesn’t depend on the degrees you have, or the past companies you worked for. Being able to make an impact doesn’t even mean having any experience on paper. It’s more of a mindset.
 
-### Being a designer means solving problems for people. Period.
+## Being a designer means solving problems for people. Period.
 
 If you see a problem, if you see someone struggling, this should be your immediate reaction.
 

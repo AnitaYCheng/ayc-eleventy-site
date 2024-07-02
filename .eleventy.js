@@ -10,6 +10,7 @@ const path = require('path');
 const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
 const externalLinks = require('eleventy-plugin-external-links')
+const pluginTOC = require('eleventy-plugin-toc')
 
 const isDev = process.env.ELEVENTY_ENV === 'development';
 const isProd = process.env.ELEVENTY_ENV === 'production'
@@ -134,6 +135,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode('image', imageShortcode);
   eleventyConfig.addPairedShortcode('gallery', galleryShortcode);
   eleventyConfig.addShortcode('galleryImage', galleryImageShortcode);
+  eleventyConfig.addPlugin(pluginTOC, {
+      tags: ['h2']
+    });
   eleventyConfig.addPlugin(externalLinks, {
     // Plugin defaults:
     name: 'external-links',         // Plugin name
@@ -215,7 +219,7 @@ eleventyConfig.addMarkdownHighlighter((str, language) => {
 });
 
 eleventyConfig.setDataDeepMerge(true);
-eleventyConfig.addPassthroughCopy({ 'src/images': 'images' });
+// eleventyConfig.addPassthroughCopy({ 'src/images': 'images' });
 eleventyConfig.setBrowserSyncConfig({ files: [manifestPath] });
 
 eleventyConfig.addShortcode('bundledcss', function () {

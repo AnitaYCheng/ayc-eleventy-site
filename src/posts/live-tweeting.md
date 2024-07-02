@@ -36,7 +36,7 @@ Secondly, I’m pretty good at this live-tweeting thing, but even *I* can’t li
 
 - - - - - -
 
-## A few general things about live-tweeting in particular:
+## A few general things about live-tweeting in particular
 
 ### Q: Should I live-tweet this event?
 
@@ -97,7 +97,7 @@ With that taken care of, let’s get down to brass tacks:
 
 - - - - - -
 
-## Before each event:
+## Before each event
 
 ### 1. Confirm the speaker’s Twitter handle, so you can use it throughout the talk.
 
@@ -135,7 +135,7 @@ Something new we’re trying at World IA Day Los Angeles 2017, is a [Google Shee
 
 - - - - - -
 
-## During the event:
+## During the event
 
 ### 1. Find a seat near the middle of the room.
 
@@ -206,7 +206,7 @@ Anyone can take a picture of a slide and post it, but you can go the extra mile 
 
 - - - - - -
 
-## After the event:
+## After the event
 
 Before I leave, I like to give one last shout-out tweet to the speaker, the organizers, and the sponsors. It lets your followers know what you’re done too.
 

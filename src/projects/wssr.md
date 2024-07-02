@@ -1,7 +1,7 @@
 ---
 title: 'Why So Serious? Redux website'
 date: '2010-10-09'
-work_description: I designed and developed <a href="http://www.whysoseriousredux.com/">WhySoSeriousRedux.com</a> from concept to launch. It is an online archive of Why So Serious?, the viral marketing campaign for the film <em>The Dark Knight</em>. It is the only website of its kind, encompassing 450+ pieces of information, documenting the largest alternate reality game ever produced. It provided a way for dedicated players to emotionally engage with the experience once more.
+work_description: I designed and developed <a href="http://www.whysoseriousredux.com/">WhySoSeriousRedux.com</a> from concept to launch. It is an online archive of Why So Serious?, the viral marketing campaign for the film <em>The Dark Knight</em>. It is the only website of its kind, encompassing 450+ pieces of information, documenting the largest alternate reality game ever produced.
 description: Case study about a web archive for The Dark Knight's alternate reality game.
 permalink: /projects/wssr/
 work_type: Website

@@ -43,7 +43,7 @@ I then inventoried all 166 requirements in Airtable, logging them as:
 ### Application structure
 With all of the requirements logged, I worked with the product team on structuring the application. We had to make it easy for the staff to maintain the questions, while also making it easy for the applicant to fill out.
 
-Because a cannabis business could apply for multiple activities (such as storefront retail and delivery, among others) in 11 different combinations, I determined it would be best to release part 2 as modular forms. That way, Office of Cannabis staff wouldn’t need to maintain the same questions on 11 different forms.
+Because a cannabis business could apply for multiple activities (such as storefront retail and delivery, among others) in 11 different combinations, I determined it would be best to release “part 2“ as modular forms. That way, Office of Cannabis staff wouldn’t need to maintain the same questions on 11 different forms.
 
 {% image "src/images/CannabisFormMatrix.png", "Table of forms by cannabis activity in practice, displaying how all applicants would need the general operations, security, and staffing forms, but a cultivator applicant would only need an additional cultivator form, not delivery form.","How the form modules worked, sharing universal requirements while splitting off the specializations." %}
 

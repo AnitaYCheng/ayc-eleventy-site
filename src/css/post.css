@@ -12,6 +12,44 @@ header.archive h2 {
   line-height:1.6;
 }
 
+aside.aside__toc {
+  max-width:40%;
+  float:left;
+  display:inline;
+  position:-webkit-sticky;
+  position: sticky;
+  top:1rem;
+  margin-left:-55%;
+  line-height:1.2;
+  font-size:var(--text-base);
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+aside.aside__toc strong {
+  font-weight:700;
+  margin-left:3rem;
+}
+
+nav.toc ol {
+  list-style-type: none;
+}
+
+nav.toc ol li {
+  margin-bottom:1.5rem;
+}
+
+nav.toc ol a {
+  text-decoration: none;
+}
+
+nav.toc ol a.active {
+  font-weight:700;
+  color: var(--color);
+}
+
+.font-large aside.aside__toc {
+  display:none;
+}
 
 .post {
   /* display: flex;

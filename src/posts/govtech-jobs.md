@@ -1,5 +1,5 @@
 ---
-title: GovTech, the job you never thought you'd love
+title: GovTech, the job you never thought you’d love
 description: Why government is an awesome place to work for a technologist, and what you need to get there.
 date: '2017-01-24'
 permalink: /writing/govtech-jobs/

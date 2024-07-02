@@ -74,6 +74,30 @@ window.onload = function() {
   container.classList.add('hang-punctuation');
 }
 
+// Active state when TOC header is scrolled to, from https://stackoverflow.com/questions/65954297/highlighting-item-in-table-of-contents-when-section-is-active-on-page-as-scrolli
+const anchors = document.querySelectorAll('h2');
+const links = document.querySelectorAll('aside > nav > ol > li > a');
+
+window.addEventListener('scroll', (event) => {
+  if (typeof(anchors) != 'undefined' && anchors != null && typeof(links) != 'undefined' && links != null) {
+    let scrollTop = window.scrollY;
+    
+    // highlight the last scrolled-to: set everything inactive first
+    links.forEach((link, index) => {
+      link.classList.remove("active");
+    });
+    
+    // then iterate backwards, on the first match highlight it and break
+    for (var i = anchors.length-1; i >= 0; i--) {
+      if (scrollTop > anchors[i].offsetTop - 75) {
+        links[i].classList.add('active');
+        break;
+      }
+    }
+  }
+});
+
+// Add CSS class to body if font size or zoom set to large
 function getComputedFontSize() {
     const para = document.querySelector('p');
     const compStyles = window.getComputedStyle(para);

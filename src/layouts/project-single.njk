@@ -5,13 +5,13 @@ layout: base.njk
   <header id="work-excerpt">
     <h1>{{ title | safe }}</h1>
     <div class="post__details">
-      <p>{{ work_type }}</p>
+      <span>{{ work_type }}</span>
       {% if start_date %}
-        <p><strong>Duration:</strong> {{ start_date }} {% if end_date %}to {{ end_date }}{% endif %}</p>
+        <span><strong>Duration:</strong> {{ start_date }} {% if end_date %}to {{ end_date }}{% endif %}</span>
       {% endif %}
-      <p class="work-direction">{{ work_direction | safe }}</p>
+      <span class="work-direction">{{ work_direction | safe }}</span>
       <section class="work-contribution"><lh><em>What I did: </em></lh>{{ work_contribution | safe }}</section>
-      <p>{{ work_description |safe }}</p>
+      <span>{{ work_description |safe }}</span>
     </div>
   </header>
 

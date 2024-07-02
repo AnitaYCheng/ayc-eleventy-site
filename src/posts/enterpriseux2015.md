@@ -1,14 +1,14 @@
 ---
 title: 'EnterpriseUX at SoCalUX Camp 2015'
 date: '2015-08-15'
-description: "Notes from Louis Elfman's talk."
+description: "Notes from Louis Elfman’s talk."
 permalink: /notes/enterpriseux-2015/
 tags:
     - design
     - events
     - notes
 ---
-## We're in UX to help people
+## We’re in UX to help people
 UXers think, “This is bullshit, and I want to help fix this.”
 
 ## UX has to recruit all other team members to get buy-in
